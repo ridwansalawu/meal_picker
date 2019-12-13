@@ -4,6 +4,8 @@ import './App.css';
 class App extends React.Component {
   state = {
     users:[]
+    
+
   };
 
   componentDidMount() {
@@ -11,12 +13,14 @@ class App extends React.Component {
         .then(response => response.json())
         .then(json => {
           this.setState({users: json})
+        
         });
+        
   }
 
 
   render() {
-    const userElements = this.state.users.map((user) => <li>{user.username}, {user.email}</li> )
+    const userElements = this.state.users.map((user) => <li>{user.username}, {user.email}</li>);
     return (
       <div>
       <header className="App-header">Current Users</header>
@@ -24,6 +28,7 @@ class App extends React.Component {
       </div>
     );
   }
+  
 }
 
 export default App;

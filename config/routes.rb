@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'cuisines/get'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/api/users', to: 'users#get'
 end
