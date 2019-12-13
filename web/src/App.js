@@ -20,7 +20,7 @@ class App extends React.Component {
 
 
   render() {
-    const userElements = this.state.users.map((user) => <li>{user.username}, {user.email}</li>);
+    const userElements = this.state.users.map((user) => <li key={user.id}>{user.username}, {user.email}</li>);
     return (
       <div>
       <header className="App-header">Current Users</header>
